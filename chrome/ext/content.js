@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse)
 {
     if(message.log) {
-      console.log(JSON.stringify(message))
+      console.error(JSON.stringify(message))
     }
   return ext.onMessage._dispatch(message, {}, sendResponse).indexOf(true) != -1;
 });
